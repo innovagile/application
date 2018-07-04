@@ -1,0 +1,16 @@
+version: "3"
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    links:
+      - mailcatcher
+    volumes:
+      - "./config/app.json.dev:/app/timeoff-management/config/app.json:ro"
+      - "./views:/app/timeoff-management/views:ro"
+
+  mailcatcher:
+    image: schickling/mailcatcher
+    ports:
+      - "3001:1080"

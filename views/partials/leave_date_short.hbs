@@ -1,0 +1,7 @@
+{{# with leave ~}}
+  {{# with this.get_start_leave_day ~}}
+    {{~ as_date this.date ~}}
+  {{~/with}} - {{# with this.get_end_leave_day ~}}
+    {{~ as_date this.date ~}}
+  {{~/with~}}
+{{~/with~}}

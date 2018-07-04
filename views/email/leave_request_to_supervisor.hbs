@@ -1,10 +1,12 @@
-Wniosek urlopowy: {{#with requester}}{{this.full_name}}{{/with}}, okres: {{>leave_request_detail leave=leave }}
+Wniosek urlopowy: {{#with requester}}{{this.full_name}}{{/with}}, okres: {{>leave_date_short leave=leave }}
 =====
 <p>Dzień dobry,</p>
 
-<p>Proszę o udzielenie mi urlopu w dniach {{>leave_request_detail leave=leave }}.</p>
+<p>Niniejszym składam wniosek o dni wolne.</p>
+<p>Rodzaj: Urlop</p>
+<p>Okres: {{>leave_date_short leave=leave }}</p>
 
 <p>Pozdrawiam</p>
-{{#with requester}}{{this.full_name}}{{/with}}
+<p>{{#with leave}}{{this.full_name}}{{/with}}</p>
 
 <p>{{> email/link href=(concatenate (get_application_domain) '/requests/' ) text='Zobacz'}}</p>

@@ -1,3 +1,10 @@
+# Development environment
+To run development environment just type `docker-compose up` 
+
+TimeOff is available at http://127.0.0.1:3000
+
+MailCatcher is available at http://127.0.0.1:3000 
+
 
 # TimeOff.Management
 
