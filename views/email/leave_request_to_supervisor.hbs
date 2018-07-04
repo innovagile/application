@@ -7,6 +7,6 @@ Wniosek urlopowy: {{#with requester}}{{this.full_name}}{{/with}}, okres: {{>leav
 <p>Okres: {{>leave_date_short leave=leave }}</p>
 
 <p>Pozdrawiam</p>
-<p>{{#with leave}}{{this.full_name}}{{/with}}</p>
+<p>{{#with requester}}{{this.full_name}}{{/with}}</p>
 
 <p>{{> email/link href=(concatenate (get_application_domain) '/requests/' ) text='Zobacz'}}</p>
