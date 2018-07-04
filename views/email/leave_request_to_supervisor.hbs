@@ -3,7 +3,7 @@ Wniosek urlopowy: {{#with requester}}{{this.full_name}}{{/with}}, okres: {{>leav
 <p>Dzień dobry,</p>
 
 <p>Niniejszym składam wniosek o dni wolne.</p>
-<p>Rodzaj: Urlop</p>
+<p>Rodzaj: {{#with leave}}{{~# if this.get_leave_type_name ~}}{{~ this.get_leave_type_name }}{{else}}Urlop{{/if}}{{/with}}</p>
 <p>Okres: {{>leave_date_short leave=leave }}</p>
 
 <p>Pozdrawiam</p>
